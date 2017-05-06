@@ -15,6 +15,7 @@
 		2F50AFF91EB5A68A00F9920D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F50AFF71EB5A68A00F9920D /* LaunchScreen.storyboard */; };
 		2F50B0011EB5AB3D00F9920D /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F50B0001EB5AB3D00F9920D /* Task.swift */; };
 		2F50B0031EB953B300F9920D /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F50B0021EB953B300F9920D /* AddTaskViewController.swift */; };
+		2F60A7FC1EB9A4A800951E9C /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F60A7FB1EB9A4A800951E9C /* DeleteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2F50AFFA1EB5A68A00F9920D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F50B0001EB5AB3D00F9920D /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Task.swift; path = ../Task.swift; sourceTree = "<group>"; };
 		2F50B0021EB953B300F9920D /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTaskViewController.swift; path = ../AddTaskViewController.swift; sourceTree = "<group>"; };
+		2F60A7FB1EB9A4A800951E9C /* DeleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,9 @@
 			children = (
 				2F50AFEB1EB5A68A00F9920D /* AppDelegate.swift */,
 				2F50B0021EB953B300F9920D /* AddTaskViewController.swift */,
-				2F50B0001EB5AB3D00F9920D /* Task.swift */,
 				2F50AFED1EB5A68A00F9920D /* ViewController.swift */,
+				2F60A7FB1EB9A4A800951E9C /* DeleteViewController.swift */,
+				2F50B0001EB5AB3D00F9920D /* Task.swift */,
 				2F50AFEF1EB5A68A00F9920D /* Main.storyboard */,
 				2F50AFF51EB5A68A00F9920D /* Assets.xcassets */,
 				2F50AFF71EB5A68A00F9920D /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F50B0011EB5AB3D00F9920D /* Task.swift in Sources */,
+				2F60A7FC1EB9A4A800951E9C /* DeleteViewController.swift in Sources */,
 				2F50AFEE1EB5A68A00F9920D /* ViewController.swift in Sources */,
 				2F50AFEC1EB5A68A00F9920D /* AppDelegate.swift in Sources */,
 				2F50AFF41EB5A68A00F9920D /* AgainToDoList.xcdatamodeld in Sources */,
@@ -311,6 +315,7 @@
 				2F50AFFF1EB5A68A00F9920D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

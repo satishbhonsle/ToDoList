@@ -10,13 +10,15 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+
     @IBOutlet weak var tableView: UITableView!
     
     var task:[Task] = []
+    var rowIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        task  =  makeTasks()
+        //task  =  makeTasks()
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -58,8 +60,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //<#code#>
+            let taskItem = task[indexPath.row]
+            performSegue(withIdentifier: "DeleteSegue", sender: taskItem)
+            rowIndex = indexPath.row
+        
     }
     
+    
+    
+    @IBAction func AddTaskItemFunc(_ sender: Any) {
+        
+        performSegue(withIdentifier: "AddItemSegue", sender: nil)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "AddItemSegue") {
+            let nextVC = segue.destination as! AddTaskViewController
+            nextVC.previousVC  = self
+        }
+        if(segue.identifier == "DeleteSegue") {
+            let nextVC1 = segue.destination as! DeleteViewController
+            nextVC1.previousVC1  = self
+        }
+    }
 }
 

@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class Task{
     
     var taskname:String = ""

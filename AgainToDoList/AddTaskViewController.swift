@@ -13,7 +13,9 @@ class AddTaskViewController: UIViewController {
     @IBOutlet weak var importantSwitch: UISwitch!
     @IBOutlet weak var taskText: UITextField!
     @IBOutlet weak var taskLabel: UILabel!
-
+    
+    var  previousVC = ViewController()
+    
     
     override func viewDidLoad() {
 
@@ -28,6 +30,13 @@ class AddTaskViewController: UIViewController {
     }
     
     @IBAction func submitTaskButton(_ sender: Any) {
+        let newTask = Task()
+        newTask.important = importantSwitch.isOn
+        newTask.taskname = taskText.text!
+        previousVC.task.append(newTask)
+        previousVC.tableView.reloadData()
+        navigationController?.popViewController(animated: true)
+        
             
     }
     /*
